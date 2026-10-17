@@ -121,3 +121,31 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+form {
+    display: grid;
+    gap: 0.5rem;
+    max-width: 400px;
+    background-color: var(--farbe-karte);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+select, input, button {
+    font: inherit;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: var(--farbe-akzent);
+    color: var(--farbe-akzent-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--farbe-text);
+    outline-offset: 2px;
+}

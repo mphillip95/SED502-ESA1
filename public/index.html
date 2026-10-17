@@ -29,7 +29,7 @@
         <p>Was ist 100V-Technik? Warum nutzt man sie und welche Vorteile bietet sie?</p>
 
         <figure>
-            <img src="img/100v_technik.jpg" width="1000" height="325"alt="Darstellung der 100V-Technik Funktion der Komponenten Verstärker und Lautsprecher">
+            <img src="img/100v_technik.jpg" width="1000" height="325" alt="Darstellung der 100V-Technik Funktion der Komponenten Verstärker und Lautsprecher">
             <figcaption>Abbildung: Prinzip der 100V-Technik | Quelle: <a href="https://www.thomann.de" target="_blank" rel="noopener noreferrer">Thomann</a></figcaption>
         </figure>
 
@@ -63,14 +63,32 @@
         <h2 id="dante-titel">Dante Audio</h2>
         <p>Dante ist ein von Audinate entwickelter Standard, mit dem über ein Ethernet-Netzwerk Audiosignale übertragen werden können.</p>
         <figure>
-            <img src="img/dante-br-wallplate.png" width="800" height="600" alt="Darstellung eines Bluetooth Empfängers für den Einbau mit integriertem Dante für die Übertragung" width="800" height="600">
+            <img src="img/dante-br-wallplate.png" width="800" height="600" alt="Darstellung eines Bluetooth Empfängers für den Einbau mit integriertem Dante für die Übertragung">
             <figcaption>Abbildung: Bluetooth Empfänger mit Dante-Integration | Quelle: TurtleAV</figcaption>
         </figure>
     </section>
 
     <section id="planer" aria-labelledby="planer-titel">
         <h2 id="planer-titel">100V-Anlagenplaner</h2>
-        <p>Platzhalter</p>
+        <p>Berechne die nötige Verstärkerleistung einer 100V-Anlage mit dem Anlagenplaner!</p>
+
+        <form id="planer-formular">
+            <label for="lautsprecher-auswahl">Lautsprecher:</label>
+            <select id="lautsprecher-auswahl" name="lautsprecher"></select>
+
+            <label for="abgriff-auswahl">Leistungseinstellung:</label>
+            <select id="abgriff-auswahl" name="abgriff"></select>
+
+            <label for="anzahl">Anzahl</label>
+            <input type="number" id="anzahl" name="anzahl" min="1" max="100" value="1" required>
+
+            <button type="submit">Hinzufügen</button>
+        </form>
+
+        <h3>Geplante Lautsprecher</h3>
+        <ul id="lautsprecher-liste"></ul>
+
+        <p id="ergebnis" aria-live="polite">Noch keine Lautsprecher hinzugefügt</p>
     </section>
 
   </main>
