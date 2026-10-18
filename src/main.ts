@@ -52,7 +52,7 @@ function holeElement<T extends Element>(selektor: string): T {
 
     if(!element) {
         throw new Error(`Element "${selektor}" wurde nicht gefunden.`);
-    }
+    };
 
     return element;
 }
@@ -112,9 +112,9 @@ function formatiere(zahl: number): string {
 function erstelleListenEintraege(positionen: Position[]): string {
     return positionen
         .map((p, index) => `
-            <button type="button" data-index="${index}" aria-label="{p.lautsprecher.artikel} entfernen">Entfernen</button>
             <li>
                 ${p.anzahl} x ${p.lautsprecher.artikel} (${formatiere(p.abgriff)} W) = ${formatiere(p.anzahl * p.abgriff)} W
+                <button type="button" data-index="${index}" aria-label="${p.lautsprecher.artikel} entfernen">Entfernen</button>
             </li>`)
         .join("");
 }
